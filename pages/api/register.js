@@ -1,7 +1,6 @@
 import User from "../../Backend/Models/User";
 import connectToDB from "../../Backend/database/mongoose";
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 
 const handler = async (req, res) => {
     let success = true;
@@ -16,13 +15,17 @@ const handler = async (req, res) => {
                 if (user) {
                     return res.status(422).json({ error: "User already exists with that email", success: false });
                 }
-                const hashedPassword = await bcrypt.hash(password, 12);
-                const newUser = new User({
-                    email,
-                    password: hashedPassword,
-                    name,
+                bcrypt.genSalt(10, async (err, salt) => {
+                    bcrypt.hash(password, salt, async (err, hashedPassword) => {
+                        const newUser = new User({
+                            email,
+                            password: hashedPassword,
+                            name,
+                        });
+                        await newUser.save();
+                        res.status(201).json({ message: "User created successfully", success, user });
+                    });
                 });
-                await newUser.save();
                 res.status(201).json({ message: "User created successfully", success, user });
             } catch (error) {
                 res.status(500).json({ error: "Internal server error", success: false });
