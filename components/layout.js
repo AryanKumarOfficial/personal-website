@@ -1,11 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { faDev, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Head from 'next/head'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
@@ -54,7 +53,7 @@ export default function Layout({ children }) {
         style={{ minWidth: '24rem', maxWidth: '37rem' }}
         className="flex flex-col items-center justify-center w-2/3"
       >
-        <div className="fixed cursor-pointer top-3 right-3">
+        <div className="fixed cursor-pointer top-3 right-3 flex mx-2">
           <DarkModeToggle
             mode={theme == 'dark' ? 'sun' : 'moon'}
             onClick={toggleDarkMode}
@@ -63,6 +62,12 @@ export default function Layout({ children }) {
             sunColor="white"
             animationDuration={1}
           />
+          <button
+            className="text-gray-400 dark:text-white hover:text-lightBlue-600 dark:hover:text-pink-500"
+            onClick={toggleDarkMode}
+          >
+            <FontAwesomeIcon className="text-2xl" icon={faArrowCircleRight} />
+          </button>
         </div>
         <motion.div layoutId="nav" className="flex flex-wrap justify-center leading-6">
           <Link href="/">
