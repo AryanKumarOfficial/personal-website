@@ -47,9 +47,9 @@ export default function Layout({ children }) {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen text-gray-800 transition duration-1000 ease-in-out dark:text-white dark:bg-blueGray-700">
       <Head>
-        <title>Katherine Oelsner</title>
+        <title>{User?.profile?.name}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <script defer data-domain="katherineoelsner.com" src="https://plausible.io/js/plausible.js"></script>
+        <script defer data-domain="aryan.com" src="https://plausible.io/js/plausible.js"></script>
       </Head>
       <div
         style={{ minWidth: '24rem', maxWidth: '37rem' }}
@@ -74,6 +74,11 @@ export default function Layout({ children }) {
           <Link href="/about">
             <button className="w-24 py-1 mx-2 text-xs leading-6 tracking-widest border border-gray-300 rounded-full dark:hover:border-pink-500 dark:border-white focus:outline-none hover:text-lightBlue-600 hover:border-lightBlue-600 dark:hover:text-pink-500">
               ABOUT
+            </button>
+          </Link>
+          <Link href="/admin/login">
+            <button className="w-24 py-1 mx-2 text-xs leading-6 tracking-widest border border-gray-300 rounded-full dark:hover:border-pink-500 dark:border-white focus:outline-none hover:text-lightBlue-600 hover:border-lightBlue-600 dark:hover:text-pink-500">
+              Login
             </button>
           </Link>
         </motion.div>

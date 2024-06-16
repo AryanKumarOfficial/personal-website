@@ -6,12 +6,16 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      lightBlue: colors.lightBlue,
+      lightBlue: colors.sky,
       blue: colors.blue,
       gray: colors.gray,
       blueGray: colors.blueGray,
       white: colors.white,
       pink: colors.pink,
+      red: colors.red,
+      green: colors.green,
+      indigo: colors.indigo,
+      // allow for hash colors
     },
   },
   variants: {
