@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
     email: {
         type: String,
         required: true,
@@ -10,10 +14,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    name: {
+    resetPasswordToken: {
         type: String,
-        required: true,
     },
+    resetPasswordExpires: {
+        type: Date,
+    },
+
 });
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
