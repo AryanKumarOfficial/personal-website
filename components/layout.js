@@ -1,46 +1,46 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { faDev, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Head from 'next/head';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
+import { AnimatePresence, motion } from 'framer-motion'
+import { faDev, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-const DarkModeToggle = dynamic(() => import('dark-mode-toggle-animation'), { ssr: false });
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Head from 'next/head'
+import Link from 'next/link'
+import dynamic from 'next/dynamic'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { useEffect } from 'react'
+import { useLocalStorage } from '../hooks/useLocalStorage'
+
+const DarkModeToggle = dynamic(() => import('dark-mode-toggle-animation'), { ssr: false })
 
 export default function Layout({ children }) {
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useLocalStorage('theme', 'light')
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setMounted(true);
-      const initialTheme = localStorage.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      setTheme(initialTheme);
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.getElementsByTagName('html')[0].classList.add('dark')
+    } else {
+      document.getElementsByTagName('html')[0].classList.remove('dark')
     }
-  }, [setTheme]);
+  }, [])
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      const root = document.documentElement;
-      if (theme === 'dark') {
-        root.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        root.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
+    if (theme == 'dark') {
+      document.getElementsByTagName('html')[0].classList.add('dark')
+      localStorage.theme = 'dark'
+    } else {
+      document.getElementsByTagName('html')[0].classList.remove('dark')
+      localStorage.theme = 'light'
     }
-  }, [theme]);
+  }, [theme])
 
   const toggleDarkMode = () => {
-    setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
-  };
-
-  if (!mounted) {
-    return null; // Prevents SSR rendering issues
+    if (theme == 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
   }
 
   return (
@@ -50,22 +50,19 @@ export default function Layout({ children }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <script defer data-domain="katherineoelsner.com" src="https://plausible.io/js/plausible.js"></script>
       </Head>
-      <div style={{ minWidth: '24rem', maxWidth: '37rem' }} className="flex flex-col items-center justify-center w-2/3">
-        <div className="fixed cursor-pointer top-3 right-3 flex mx-2">
+      <div
+        style={{ minWidth: '24rem', maxWidth: '37rem' }}
+        className="flex flex-col items-center justify-center w-2/3"
+      >
+        <div className="fixed cursor-pointer top-3 right-3">
           <DarkModeToggle
-            mode={theme === 'dark' ? 'sun' : 'moon'}
+            mode={theme == 'dark' ? 'sun' : 'moon'}
             onClick={toggleDarkMode}
             width="3rem"
             moonColor="#334155"
             sunColor="white"
             animationDuration={1}
           />
-          <button
-            className="text-gray-400 dark:text-white hover:text-lightBlue-600 dark:hover:text-pink-500"
-            onClick={toggleDarkMode}
-          >
-            <FontAwesomeIcon className="text-2xl" icon={faArrowCircleRight} />
-          </button>
         </div>
         <motion.div layoutId="nav" className="flex flex-wrap justify-center leading-6">
           <Link href="/">
@@ -79,7 +76,10 @@ export default function Layout({ children }) {
             </button>
           </Link>
         </motion.div>
-        <motion.div layoutId="border-div" className="flex flex-col items-center justify-center w-full py-8 my-6 border-t border-b border-gray-300 dark:border-white">
+        <motion.div
+          layoutId="border-div"
+          className="flex flex-col items-center justify-center w-full py-8 my-6 border-t border-b border-gray-300 dark:border-white"
+        >
           <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
         </motion.div>
         <motion.div layoutId="social-icons" className="flex items-center justify-center">
@@ -107,5 +107,5 @@ export default function Layout({ children }) {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }

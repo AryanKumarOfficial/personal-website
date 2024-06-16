@@ -1,14 +1,11 @@
 import 'tailwindcss/tailwind.css'
 import { AnimateSharedLayout } from 'framer-motion'
-import { SessionProvider } from 'next-auth/react'
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <SessionProvider session={session}>
-      <AnimateSharedLayout>
-        <Component {...pageProps} />
-      </AnimateSharedLayout>
-    </SessionProvider>
+    <AnimateSharedLayout>
+      <Component {...pageProps} />
+    </AnimateSharedLayout>
   )
 }
 

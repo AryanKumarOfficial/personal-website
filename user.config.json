@@ -1,0 +1,381 @@
+{
+  "profile": {
+    "name": "Aryan Kumar",
+    "email": "aryanak9163@gmail.com",
+    "phone": "+918235172505",
+    "address": "Sitamarhi, Bihar, India",
+    "city": "Sitamarhi",
+    "state": "Bihar",
+    "zip": "843301",
+    "country": "India",
+    "avatar": "https://avatars0.githubusercontent.com/u/102245849?s=460&v=4",
+    "website": "https://aryanak.com",
+    "summary": "I am a software engineer with 5 years of experience in building web applications. I am passionate about software development and I love to learn new technologies. I have a Master's degree in Computer Science from Stanford University.",
+    "objective": "I am looking for a challenging role in a software company where I can utilize my skills and contribute to the success of the company.",
+    "bio": "Software Developer"
+  },
+  "social": {
+    "facebook": "aryan.kumar.2505",
+    "twitter": "https://www.twitter.com",
+    "linkedin": "aryanji",
+    "instagram": "i_aryankushwaha",
+    "github": "developeraaryan"
+  },
+  "work": {
+    "company": "Google",
+    "position": "Software Engineer",
+    "salary": "$120,000",
+    "experience": "5 years"
+  },
+  "education": {
+    "degree": "Master",
+    "school": "Stanford University",
+    "field": "Computer Science",
+    "graduation": "2012"
+  },
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "90%"
+    },
+    {
+      "name": "CSS",
+      "level": "80%"
+    },
+    {
+      "name": "JavaScript",
+      "level": "70%"
+    },
+    {
+      "name": "React",
+      "level": "60%"
+    },
+    {
+      "name": "Node.js",
+      "level": "50%"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "url": "https://www.google.com"
+    },
+    {
+      "name": "Project 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "url": "https://www.google.com"
+    },
+    {
+      "name": "Project 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "url": "https://www.google.com"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certification 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Certification 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Certification 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "Spanish",
+      "level": "Professional"
+    },
+    {
+      "name": "French",
+      "level": "Intermediate"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music"
+    },
+    {
+      "name": "Travel"
+    },
+    {
+      "name": "Photography"
+    }
+  ],
+  "references": [
+    {
+      "name": "Reference 1",
+      "company": "Company 1",
+      "position": "Position 1",
+      "phone": "1234567890",
+      "email": "aryanak9163@gmail.com"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Testimonial 1",
+      "company": "Company 1",
+      "position": "Position 1",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "name": "Testimonial 2",
+      "company": "Company 2",
+      "position": "Position 2",
+      "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    }
+  ],
+  "awards": [
+    {
+      "name": "Award 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Award 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Award 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication 1",
+      "publisher": "Publisher 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Publication 2",
+      "publisher": "Publisher 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Publication 3",
+      "publisher": "Publisher 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "volunteer": [
+    {
+      "name": "Volunteer 1",
+      "organization": "Organization 1",
+      "position": "Position 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Volunteer 2",
+      "organization": "Organization 2",
+      "position": "Position 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Volunteer 3",
+      "organization": "Organization 3",
+      "position": "Position 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Hobby 1"
+    },
+    {
+      "name": "Hobby 2"
+    },
+    {
+      "name": "Hobby 3"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Course 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Course 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Course 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "conferences": [
+    {
+      "name": "Conference 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Conference 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Conference 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "workshops": [
+    {
+      "name": "Workshop 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Workshop 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Workshop 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "webinars": [
+    {
+      "name": "Webinar 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Webinar 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Webinar 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "meetups": [
+    {
+      "name": "Meetup 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Meetup 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Meetup 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "hackathons": [
+    {
+      "name": "Hackathon 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Hackathon 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Hackathon 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "exhibitions": [
+    {
+      "name": "Exhibition 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Exhibition 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Exhibition 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "competitions": [
+    {
+      "name": "Competition 1",
+      "authority": "Authority 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Competition 2",
+      "authority": "Authority 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Competition 3",
+      "authority": "Authority 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "internships": [
+    {
+      "name": "Internship 1",
+      "company": "Company 1",
+      "position": "Position 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Internship 2",
+      "company": "Company 2",
+      "position": "Position 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Internship 3",
+      "company": "Company 3",
+      "position": "Position 3",
+      "date": "Mar 2019"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "Job 1",
+      "company": "Company 1",
+      "position": "Position 1",
+      "date": "Jan 2019"
+    },
+    {
+      "name": "Job 2",
+      "company": "Company 2",
+      "position": "Position 2",
+      "date": "Feb 2019"
+    },
+    {
+      "name": "Job 3",
+      "company": "Company 3",
+      "position": "Position 3",
+      "date": "Mar 2019"
+    }
+  ]
+}
