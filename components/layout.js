@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { faDev, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faDev, faGithub, faLinkedinIn, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Head from 'next/head'
@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react'
 import { useLocalStorage } from '../hooks/useLocalStorage'
+import User from '../user.config.json'
 
 const DarkModeToggle = dynamic(() => import('dark-mode-toggle-animation'), { ssr: false })
 
@@ -85,21 +86,28 @@ export default function Layout({ children }) {
         <motion.div layoutId="social-icons" className="flex items-center justify-center">
           <a
             className="text-gray-400 dark:text-white hover:text-lightBlue-600 dark:hover:text-pink-500"
-            href="https://github.com/octokatherine"
+            href={`https://github.com/${User?.social?.github}`}
             target="_blank"
           >
             <FontAwesomeIcon className="mr-6 text-2xl " icon={faGithub} />
           </a>
           <a
             className="text-gray-400 dark:text-white hover:text-lightBlue-600 dark:hover:text-pink-500"
-            href="https://twitter.com/katherinecodes"
+            href={`https://twitter.com/${User?.social?.twitter}`}
             target="_blank"
           >
             <FontAwesomeIcon className="mr-6 text-2xl" icon={faTwitter} />
           </a>
           <a
             className="text-gray-400 dark:text-white hover:text-lightBlue-600 dark:hover:text-pink-500"
-            href="https://www.linkedin.com/in/katherineoelsner/"
+            href={`https://facebook.com/${User?.social?.facebook}`}
+            target="_blank"
+          >
+            <FontAwesomeIcon className="mr-6 text-2xl" icon={faFacebook} />
+          </a>
+          <a
+            className="text-gray-400 dark:text-white hover:text-lightBlue-600 dark:hover:text-pink-500"
+            href={`https://www.linkedin.com/in/${User?.social?.linkedin}/`}
             target="_blank"
           >
             <FontAwesomeIcon className="mr-6 text-2xl" icon={faLinkedinIn} />

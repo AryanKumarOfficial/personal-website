@@ -12,7 +12,7 @@ export default function About() {
         className="px-4"
       >
         <div className="mb-6 text-center text-gray-800 dark:text-white">
-          Hi, I'm Katherine! I am a Senior Software Engineer at GitHub with a passion for developing web and mobile
+          Hi, I'm Aryan! I am a Senior Software Engineer at GitHub with a passion for developing web 
           applications that make a positive impact on peoples lives.
         </div>
         <div className="text-center text-gray-800 dark:text-white">
